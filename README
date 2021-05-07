@@ -1,0 +1,24 @@
+Original program written in February 2014.
+
+As stated in the repository description, this is a molecular dynamics simulation using the Monte-Carlo method
+and the Metropolis algorithm.
+
+The basis is the following: on a flat glass surface, a polymer(P)-lipide(L) mixture is evenly spread and then cooled.
+This program is simulating how different interaction strengths between the components influence the separation 
+of the components, and involves a factor to simulate how the polymers can interact 'above' the lipide layer with their
+further neighbors (simulated until 2 unit distance).
+
+In the initial UI, the ratio of the components, the experiment temperature (in a relative T), and the interaction strength
+between the different species can be given (starts up with the recommended settings), along with the simulation size and
+number of tries to swap two molecules.
+
+During simulation, this program takes snapshots at regular intervals and saves (some of) it at a given directory. 
+The simulation window shows the progress of the simulation (somewhat laggy if it's also taking snapshots).
+
+During each simulation step, a molecule is randomly chosen along with one of its six neighbours (Monte-Carlo). Depending on
+the locational energy (first and second level neighbours contribute to this), the energy gain/loss from swapping them is
+determined. Using an exponential formula (based on literature), a swapping probability is determined
+(0 for impossible to swap, 1 for guaranteed swap, non-inclusive). Afterwards, the Metropolis method is applied
+(generate a random number, check whether it's smaller than swapping probability, if it is, swap it).
+
+Finally, after the simulation, revelant statistics about the calculations and the end result is printed to a file.
