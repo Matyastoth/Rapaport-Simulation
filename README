@@ -1,4 +1,4 @@
-Original program written in February 2014.
+Original program written in February 2014 using NetBeans IDE 8.0.2, Java.
 
 As stated in the repository description, this is a molecular dynamics simulation using the Monte-Carlo method
 and the Metropolis algorithm.
