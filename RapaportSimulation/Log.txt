@@ -1,0 +1,13 @@
+Lipid concentration (%)	50.0
+Polymer concentration (%)	50.0
+Dimension (will be a square)	100.0
+Temperature (relative)	1.0
+Interaction strength L-L	1.0
+Interaction strength L-P	1.0
+Interaction strength P-P	2.0
+Interaction strength P-P2	2.0
+Number of steps per exp(*1000)	10000.0
+Number of experiments	1.0
+
+Molfraction:	0.9878
+(mol polymer in cluster vs mol polymer overall)
