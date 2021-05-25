@@ -253,7 +253,7 @@ public class ComputingThread implements Runnable {
 
     /**
      * This method calculates how much energy is gained or lost by swapping the randomly chosen L/P - L/P pair.
-     * The output of this method is used as a boundary for determining 
+     * The output of this method is used as a boundary for determining how likely is a swap to happen.
      * @param map
      * @param location
      * @param neighbourlocation
@@ -299,7 +299,7 @@ public class ComputingThread implements Runnable {
         int secondcount;
         
         //In case this is not a polymer-lipide pair, the 'variable' is negative, so the method won't enter this loop.
-        //Technically, this is just a fancy way to avoid using an IF statement.
+        //Technically, this is just a fancy way to avoid using an IF statement, but not any more effective.
         for (int i = 0; i < variable; i++) {
             secondcount = 0;
             //Add the old locations...
@@ -372,12 +372,9 @@ public class ComputingThread implements Runnable {
      * @return
      */
     private int getNeighbourLocation(int location, int mapdimension, int[] direction) {
-        return (location / mapdimension
-                + mapdimension + direction[0])
-                % mapdimension * mapdimension
-                + (location % mapdimension
-                + mapdimension + direction[1])
-                % mapdimension;
+        return 
+                (location / mapdimension + mapdimension + direction[0]) % mapdimension * mapdimension
+                + (location % mapdimension + mapdimension + direction[1]) % mapdimension;
     }
     /**
      * This method, as the name suggests, initiates the different directional
