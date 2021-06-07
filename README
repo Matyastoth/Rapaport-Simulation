@@ -2,6 +2,7 @@ Original program written in February 2014 using NetBeans IDE 8.0.2, Java.
 
 Included in the 'RapaportSimulation/illustrations' folder, one can find three .png files showcasing
 the output of this program with the recommended settings.
+
 An executable file can be found at ../Rapaport-Simulation/RapaportSimulation/dist/RapaportSimulation.jar.
 
 As stated in the repository description, this is a molecular dynamics simulation using the Monte-Carlo method
